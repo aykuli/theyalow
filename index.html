@@ -95,14 +95,29 @@
           <div  id="video-controls"
               class="controls"
               data-state="closed">
-            <button class="controls__play--on-player" id="playpause" type="button" data-state="visible">Play/Pause on player</button>
-            <button class="controls__play" id="playpause" type="button" data-state="visible">Play/Pause</button>
+              <button   class="controls__play--on-player"
+                        id="playpause"
+                        type="button"
+                        data-state="visible">
+                <span class="visually-hidden">Play or pause on player</span>
+                <div class="play-btn"></div>
+              </button>
+              <button   class="controls__play"
+                        id="playpause"
+                        type="button"
+                        data-state="visible">
+                <span class="visually-hidden">Play or pause on player</span>
+                <div class="play-btn"></div>
+              </button>
             <div class="progress">
-               <progress id="progress" value="0" min="0">
-                  <span id="progress-bar"></span>
-               </progress>
+               <progress id="progress" value="40" min="0" max="100"></progress>
             </div>
-            <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
+            <button   class="controls__mute"
+                      id="mute"
+                      type="button"
+                      data-state="mute">
+              <span class="visually-hidden">Mute</span>
+            </button>
           </div>
         </div>
         <div class="slider__text">
