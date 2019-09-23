@@ -56,10 +56,18 @@
 
 /*********** Scaffolding **************/
 body {
-  background-color: rgb(239, 245, 225);
+  min-width: --mobile-width;
+  max-width: --desktop-width;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+
+  background-color: var(--main-white);
 }
 
 a {
+  text-transform: uppercase;
 	text-decoration: none;
 }
 
@@ -79,13 +87,210 @@ a {
 	overflow: hidden;
 }
 
-.container {
-	width: 1300px;
-  margin: auto;
-  padding: 0 9px;
+.page-wrap {
+  min-width: var(--mobile-width);
+  max-width:  var(--desktop-width);
+  margin: 0 auto;
+  padding: 0;
 }
 /******** END of Scaffolding ***********/
 
 /*********** Header **************/
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  padding: 11px 15px 11px 11px;
+
+  background-color: #000;
+  background: linear-gradient(to bottom, #5d5d5d, #444);
+}
+
+.logo__link {
+  display: flex;
+  align-items: center;
+}
+
+.logo__icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+}
+
+.logo__txt {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Lucida Sans", "Arial", sans-serif;
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: 400;
+  font-style: italic;
+  color: #fff;
+}
+
+.nav__link {
+}
+
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--main-yellow);
+  list-style: none;
+}
+
+.nav__item {
+  margin-top: auto;
+  padding: 0;
+
+  font-family: "Segoe WP", "Arial", sans-serif;
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: 400;
+
+  background-color: var(--main-yellow);
+}
+
+.nav__icon {
+  width: 24px;
+  height: 22px;
+  padding-right: 10px;
+}
+
+.nav__link {
+  display: block;
+
+  padding-top: 16px;
+  padding-right: 10px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+
+  color: #9b7d08;
+}
+
+.nav__link:hover,
+.nav__link:focus,
+.nav__link:active {
+  color: #000;
+}
+
+.nav__link:hover g,
+.nav__link:focus g,
+.nav__link:active g {
+  fill: #000;
+}
+
+@media(min-width: 1300px) {
+  .page-header {
+    padding: 25px 140px 0;
+  }
+
+  .logo {
+    padding: 0;
+    background: transparent;
+  }
+
+  .logo__icon {
+    width: 85px;
+    height: 85px;
+  }
+
+  .logo__txt {
+    font-size: 41px;
+    line-height: 42px;
+  }
+
+  .nav__list {
+    background: transparent;
+  }
+
+  .nav__item {
+    font-size: 17px;
+    line-height: 21px;
+    font-weight: 400;
+  }
+
+  .nav__link {
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    color: #9b7d08;
+
+    box-shadow: -4px -5px 0 rgba(245, 197, 6, .27),
+                -8px -10px 0 rgba(245, 197, 6, .27);
+  }
+
+  .nav__icon {
+    height: 19px;
+    padding-right: 10px;
+  }
+
+}
+
+/******** Main ***********/
+/* Slider */
+.controls {
+  position: relative;
+
+  width: 100%;
+  height: 30px;
+}
+
+.controls[data-state=hidden] {
+  display:none;
+}
+
+.controls[data-state=visible] {
+  display:block;
+}
+
+.controls > * {
+  display: block;
+}
+
+.controls button {
+  cursor:pointer;
+
+  background-color: var(--main-yellow);
+  background-size:contain;
+  background-repeat:no-repeat;
+
+}
+
+.controls__play--on-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  background-color: var(--main-yellow);
+  border: 2px solid red;
+  opacity: 0.72;
+}
+
+/* END of Slider */
+/******** END of Main ***********/
 
 /******** END of Header ***********/
+/* ----------------------------
+----  outlines -------------
+---------------------------- */
+.page-wrap {
+  outline: 1px solid red;
+}
+
+.nav__item {
+  outline: 1px solid rgb(37, 202, 51);
+}
+
+.nav__link {
+  outline: 1px solid rgb(157, 27, 218);
+}
