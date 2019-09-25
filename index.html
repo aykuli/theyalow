@@ -97,22 +97,21 @@
           <div  id="video-controls"
               class="controls"
               data-state="closed">
-              <button   class="controls__play--on-player"
-                        id="playpause"
-                        type="button"
-                        data-state="visible">
-                <span class="visually-hidden">Play or pause on player</span>
-                <div class="play-btn"></div>
-              </button>
-              <button   class="controls__play"
-                        id="playpause"
-                        type="button"
-                        data-state="visible">
-                <span class="visually-hidden">Play or pause on player</span>
-                <div class="play-btn"></div>
-              </button>
-               <progress id="progress" value="40" min="0" max="100"></progress>
-
+            <button   class="controls__play--on-player"
+                      id="playpause"
+                      type="button"
+                      data-state="visible">
+              <span class="visually-hidden">Play or pause on player</span>
+              <div class="play-btn"></div>
+            </button>
+            <button   class="controls__play"
+                      id="playpause"
+                      type="button"
+                      data-state="visible">
+              <span class="visually-hidden">Play or pause on player</span>
+              <div class="play-btn"></div>
+            </button>
+            <progress id="progress" value="40" min="0" max="100"></progress>
             <button   class="controls__mute"
                       id="mute"
                       type="button"
@@ -230,67 +229,95 @@
         </div>
       </section>
       <section class="tweets">
-        <h2 class="tweets__title">Lorem ipsum dolor sit amet</h2>
         <div class="tweets__wrap">
-          <article class="tweets__tweet">
-            <h3 class="visually-hidden">See our latest tweets:</h3>
-            <p class="tweets__tweet-current">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-            </p>
-            <button class="tweets__btn">
-              +
-              <span class="visually-hidden">more tweets</span>
-            </button>
-            <div class="tweets__date">
-              <p class="tweets__date--day">25</p>
-              <p class="tweets__date__month">April</p>
+          <h2 class="tweets__title white-txt">Lorem ipsum dolor sit amet</h2>
+          <article class="tweets__article white-txt">
+            <h3 class="visually-hidden">Lorem ipsum</h3>
+            <div class="tweets__tweet-current">
+              <p class="tweets__txt">
+                Lorem ipsum dolor sit amet, consecte&shy;tur adipisicing elit, sed do eiusmod tempor incididunt ut
+              </p>
+              <button class="tweets__btn" type="button">
+                  <span class="visually-hidden">more tweets</span>
+              </button>
+              <div class="tweets__date">
+                <p class="tweets__date--day">25</p>
+                <p class="tweets__date--month">April</p>
+              </div>
             </div>
-          </article>
-          <div class="tweets__video">
-              <video  class="tweets__video"
-                      poster=""
+            <div class="tweets__video">
+              <video  class=""
+                      poster="assets/tweets-video.jpg"
                       width="315" height="232">
-                <source src="#"
+                <source src="https://media.w3.org/2010/05/sintel/trailer.mp4"
                         type="video/mp4">
-                <source src="#"
-                        type="video/webm">
-                        Сожалею; ваш браузер не поддерживает HTML5 видео в WebM с VP8 или MP4 с H.264.
+                        Сожалею; ваш браузер не поддерживает HTML5 видео в MP4 с H.264.
               </video>
-          </div>
-          <div class="tweets__tweet-posting">
-              <ul class="tweets__list">
-                <li class="tweets__item">
-                  Daily Mobile UI Design Inspiration #1
-                  <br>via @cssauthor
-                </li>
-                <li class="tweets__item">
-                    Daily Mobile UI Design Inspiration #1
-                    <br>via @cssauthor
-                </li>
-                <li class="tweets__item">
+              <div  id="tweet-video-controls"
+                  class="controls"
+                  data-state="closed">
+                  <button   class="controls__play--on-player"
+                            id="playpause"
+                            type="button"
+                            data-state="visible">
+                    <span class="visually-hidden">Play or pause on player</span>
+                    <div class="play-btn"></div>
+                  </button>
+              </div>
+            </div>
+            <div class="tweets__tweet-posting">
+              <p class="tweets__count">22</p>
+              <svg  class="twitter-bird"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="159" height="133"
+                    viewport="0 0 159 133">
+              <path fill-rule="evenodd"
+                    fill-opacity="0.902"
+                    fill="rgb(188, 125, 0)"
+                    d="M158.522,15.312 L143.705,30.625 C143.705,30.625 143.705,29.238 143.705,33.178 C143.705,35.977 143.269,38.650 142.638,41.246 C142.293,62.313 135.800,90.248 109.132,112.297 C56.676,155.668 0.476,117.402 0.476,117.402 C44.926,117.402 44.926,102.088 44.926,102.088 C35.049,102.088 15.293,81.671 15.293,81.671 C20.232,86.775 30.110,81.671 30.110,81.671 C5.415,66.357 5.415,51.044 5.415,51.044 C10.354,56.148 20.232,51.044 20.232,51.044 C-4.463,30.625 10.354,5.103 10.354,5.103 C15.293,30.625 79.499,40.834 79.499,40.834 L80.316,40.412 C79.812,38.078 79.499,33.118 79.499,30.625 C79.499,12.302 93.872,-0.001 111.602,-0.001 C121.360,-0.001 129.996,4.595 135.883,11.698 L138.766,10.208 L153.583,-0.001 L143.705,20.417 L158.522,15.312 Z"/>
+              </svg>
+              <div class="tweet-posting">
+                <ul class="tweet-posting__list">
+                  <li class="tweet-posting__item">
                     Daily Mobile UI Design Inspiration #1
                     <br>via @cssauthor
                   </li>
-              </ul>
-              <label  class="visually-hidden"
-                      for="tweet-input" >
-                Type your tweet here
-              </label>
-              <input  class="tweets__input--text"
-                      type="text"
-                      id="tweet-input">
-              <button class="tweets__btn"
-                      type="submit">
-                Tweet
-              </button>
-          </div>
+                  <li class="tweet-posting__item">
+                      Daily Mobile UI Design Inspiration #1
+                      <br>via @cssauthor
+                  </li>
+                  <li class="tweet-posting__item">
+                      Daily Mobile UI Design Inspiration #1
+                      <br>via @cssauthor
+                    </li>
+                </ul>
+                <div class="tweets__input">
+                  <label  class="visually-hidden"
+                          for="tweet-input" >
+                    Type your tweet here
+                  </label>
+                  <input  class="tweets__input--text"
+                          type="text"
+                          id="tweet-input">
+                  <button class="tweets__input--btn"
+                          type="submit">
+                    Tweet
+                  </button>
+                </div>
+              </div>
+              <button class="tweets__btn" type="button">
+                <span class="visually-hidden">more tweets</span>
+            </button>
+            </div>
+          </article>
           <div class="tweets__range">
             <label  class="visually-hidden"
-                    for="tweet-choose">Choose tweet to read</label>
+                    for="tweet-choose">Choose tweets to read</label>
             <input  class="tweets__input--range"
                     type="range"
                     id="tweet-choose"
-                    name="volume"
+                    name="tweet-choose"
                     min="0" max="4"
                     value="2" step="1">
           </div>
