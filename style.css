@@ -76,10 +76,11 @@
        url('assets/pt-sans-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/*********** Scaffolding **************/
+/*******************************/
+/******** Scaffolding **********/
+/*******************************/
 body {
-  min-width: --mobile-width;
-  max-width: --desktop-width;
+  min-width: var(--mobile-width);
   margin: 0;
   padding: 0;
 
@@ -91,7 +92,7 @@ body {
   background-color: #fff;
 }
 
-a, p {
+a, p, h1, h2, h3 {
   margin: 0;
   padding: 0;
 
@@ -99,7 +100,13 @@ a, p {
 	text-decoration: none;
 }
 
-/*Styles for Overall Site*/
+ul, li {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
 .visually-hidden {
 	position: absolute;
 
@@ -133,9 +140,11 @@ a, p {
   margin: 0 auto;
   padding: 0;
 }
-/******** END of Scaffolding ***********/
+/***** END of Scaffolding ********/
 
+/*********************************/
 /*********** Header **************/
+/*********************************/
 .main-nav {
   display: flex;
   justify-content: space-between;
@@ -273,8 +282,11 @@ a, p {
   }
 
 }
+/******** END of Header ***********/
 
+/*************************/
 /******** Main ***********/
+/*************************/
 .page-main {
   width: 100%;
   margin: 0 auto;
@@ -330,7 +342,7 @@ a, p {
     width: 100%;
     height: 566px;
 
-    background-image: url('./assets/slider-bg.jpg');
+    background-image: url('./assets/bg-slider.jpg');
 
     z-index: -2;
   }
@@ -592,7 +604,7 @@ progress::-webkit-progress-bar {
 
 .tweets__wrap {
   max-width: 640px;
-  margin: 5px auto;
+  margin: 5px auto 0;
 }
 
 .tweets__title {
@@ -825,7 +837,6 @@ progress::-webkit-progress-bar {
 
   .tweets__wrap {
     max-width: 1024px;
-    margin-bottom: 0;
   }
 
   .tweets__article {
@@ -997,10 +1008,129 @@ progress::-webkit-progress-bar {
   border: 1px solid #fae592;
   }
 /* END of Input Range in Twitters Block */
+}
+/* END of Tweets */
 
+/* Poster with Advertisement Block */
+.poster {
+  padding-top: 37px;
+
+  background-color: var(--main-grey);
+  background-image: url('assets/bg-poster.png');
+  background-repeat: repeat;
+  background-position: 0 0;
 }
 
-/* END of Tweets */
-/******** END of Main ***********/
+.poster__wrap {
+  position: relative;
 
-/******** END of Header ***********/
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 640px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.poster__title {
+  max-width: var(--desktop-width);
+  margin-bottom: 80px;
+
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 39px;
+  line-height: 39px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--main-yellow);
+}
+
+.poster__sticker {
+  position: absolute;
+  top: -40px;
+  left: 26px;
+
+  width: 117px;
+  height: 117px;
+
+  background-color: var(--main-yellow);
+  border-radius: 50%;
+
+  z-index: 2;
+}
+
+.poster__sticker--txt {
+  font-family: 'PT Sans Narrow', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 117px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.poster__img {
+  width: 540px;
+  height: 255px;
+  margin: 0 auto;
+
+  opacity: 0.57;
+}
+
+.poster__list {
+  display: none;
+}
+
+.poster__item {
+  margin-bottom: 20px;
+
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #a9a9a7;
+}
+
+@media(min-width: 1024px) {
+  .poster__wrap {
+    max-width: 1024px;
+    padding-bottom: 80px;
+  }
+
+  .poster__title {
+    margin-bottom: 60px;
+  }
+
+
+  .poster__img {
+    padding-left: 20px;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  .poster__list {
+    display: block;
+    width: 385px;
+
+    text-align: left;
+  }
+
+  .poster__item {
+    padding-left: 35px;
+
+    background-image: url('assets/circle-marker.svg');
+    background-repeat: no-repeat;
+    background-position: 0 8px;
+  }
+
+  .poster__sticker {
+    top: -45px;
+    left: 0;
+  }
+}
+/* END of Poster Block */
+/******** END of Main *********/
+
+
+/******************************/
+/********* Footer *************/
+
+/****** END of Footer ********/
